@@ -4,6 +4,5 @@ window.addEventListener('DOMContentLoaded', () => {
 
     promoMore.addEventListener('click', () => {
         promoAdditions.classList.toggle('promo__additions_active');
-
     });
 });
