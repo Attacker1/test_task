@@ -1,4 +1,4 @@
-@extends('layouts.app')
+<!-- @extends('layouts.app')
 
 
 <!DOCTYPE html>
@@ -7,17 +7,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paper</title>
-    <?php wp_head(); ?>
 </head>
 <body>
     <section class="promo">
         <div class="container">
             <header class="header">
                 <a href="<?php echo get_home_url(); ?>" class="header__logo">
-                    <img src="<?php echo bloginfo('template_url');?>/assets/icons/logo.svg" alt="logo">
+                    <img src="@asset('icons/logo.svg')" alt="logo">
                 </a>
                 <form action="#" class="search-box">
-                    <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/linse.svg" alt="search">
+                    <img src="@asset('icons/linse.svg')" alt="search">
                     <input type="text" placeholder="Поиск заведений и блюд">
                 </form>
                 <div class="button header__language">
@@ -35,7 +34,7 @@
                     </div>
                 </div>
                 <div class="header__account">
-                    <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/avatar.png" alt="avatar">
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/avatar.svg" alt="avatar">
                 </div>
             </header>
         </div>
@@ -127,7 +126,6 @@
             </div>
         </div>
     </section>
-    <?php wp_footer(); ?>
 </body>
 </html>
-
+ -->
