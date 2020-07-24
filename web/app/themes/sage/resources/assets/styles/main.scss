@@ -13,6 +13,13 @@
 
 /** Import theme styles */
 @import "common/global";
+@import "components/style";
+@import "components/header";
+@import "components/promo";
+@import "components/restaurant";
+@import "components/buttons.scss";
+@import "components/forms";
+@import "components/titles";
 // @import "components/buttons";
 // @import "components/comments";
 // @import "components/forms";

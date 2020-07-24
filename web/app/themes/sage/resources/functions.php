@@ -90,3 +90,4 @@ Container::getInstance()
             'view' => require dirname(__DIR__).'/config/view.php',
         ]);
     }, true);
+add_theme_support('custom_logo');

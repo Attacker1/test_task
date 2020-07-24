@@ -6,81 +6,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php bloginfo('name'); echo " | "; bloginfo('description') ?></title>
-    <?php
-      wp_head();
-    ?>
+    <title>Paper</title>
+    <?php wp_head(); ?>
 </head>
 <body>
     <section class="promo">
-        <div class="background">
+        <div class="container">
+            <header class="header">
+                <a href="<?php echo get_home_url(); ?>" class="header__logo">
+                    <img src="<?php echo bloginfo('template_url');?>/assets/icons/logo.svg" alt="logo">
+                </a>
+                <form action="#" class="search-box">
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/linse.svg" alt="search">
+                    <input type="text" placeholder="Поиск заведений и блюд">
+                </form>
+                <div class="button header__language">
+                    Русский
+                    <div class="dav">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class=" button header__city">
+                    Казань
+                    <div class="dav">
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="header__account">
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/avatar.png" alt="avatar">
+                </div>
+            </header>
+        </div>
+        <div class="devider"></div>
+        <div class="container">
+            <div class="promo__wrapper">
+                <div class="promo__presentation">
+                    <h1 class="title title__white promo__title">Discover great places to eat
+                        around you in Kazan</h1>
+                        <form action="#" class="search-box search-white">
+                            <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/linse.svg" alt="search">
+                            <input type="text" placeholder="Поиск заведений и блюд">
+                        </form>
+                </div>
+            </div>
+        </div>
+        <div class="devider"></div>
+            <div class="shadow">
             <div class="container">
-                <header class="header">
-                    <div class="header__presentation">
-                        <div class="hamburger">
-                            <span></span>
+                <div class="promo__navigation">
+                    <div class="promo__list">
+                        <div class="promo__type">Все</div>
+                        <div class="promo__type">Кофейни</div>
+                        <div class="promo__type">Кафе</div>
+                        <div class="promo__type">Бары</div>
+                        <div class="promo__type">Рестораны</div>
+                        <div class="promo__type">Русская</div>
+                        <div class="promo__type">Татарская</div>
+                        <div class="promo__type">Десерты</div>
+                        <div class="promo__type">Завтраки</div>
+                    </div>
+                    <div class="promo__more">Еще
+                        <div class="dav">
                             <span></span>
                             <span></span>
                         </div>
-                        <a href="<?php echo get_home_url(); ?>">
-                          <!-- <img src="<?php echo bloginfo('template_url');?>/assets/images/logo.svg" alt="logo" class="header__logo"> -->
-                          <img src="<?php 
-                            $custom_logo__url = wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ), 'full' ); 
-                            // выводим
-                            echo $custom_logo__url[0]; 
-                           ?>" alt="Стоматология Казани" class="header__logo">
-                        </a>
-                        <div class="header__address"><?php the_field('address', 2); ?></div>
-                        <div class="header__price"><?php the_field('download_price', 2); ?></div>
                     </div>
-                    <button class="header__appointment">
-                        Записаться на прием</button>
-                </header>
-            </div>
-        </div>
-        <div class="container">
-            <div class="navigation">
-                <div class="navigation__menu">
-                    <a class="navigation__item"><?php the_field('main', 2); ?></a>
-                    <a class="navigation__item"><?php the_field('prices', 2); ?></a>
-                    <a class="navigation__item"><?php the_field('about', 2); ?></a>
-                    <a class="navigation__item"><?php the_field('shares', 2); ?></a>
-                    <a class="navigation__item"><?php the_field('blog', 2); ?></a>
-                    <a class="navigation__item"><?php the_field('questions_for_doctor', 2); ?></a>
-                    <a class="navigation__item"><?php the_field('contacts', 2); ?></a>
+                    <div class="promo__additions">
+                        <span>Не каши</span>
+                        <span>Крекеры</span>
+                        <span>К пиву</span>
+                        <span>Не каши</span>
+                        <span>Крекеры</span>
+                        <span>К пиву</span>
+                    </div>
                 </div>
-                <div class="navigation__address"><?php the_field('address', 2); ?></div>
-                <a href="tel:89297256114" class="navigation__phone"><?php the_field('phone', 2); ?></a>
-                <div class="navigation__price"><?php the_field('download_price', 2); ?></div>
             </div>
         </div>
     </section>
-    <section class="appointment">
+    <section class="restaurant">
         <div class="container">
-            <h2 class="appointment__title"><?php the_field('form_title', 2); ?></h2>
-            <form action="#" class="feed-form">
-                <div class="about_me">
-                    <div class="my_information">
-                        <input name="name" placeholder="Имя*" type="text">
-                        <input name="phone" placeholder="Мобильный телефон*" type="text">
-                        <input name="email" placeholder="Электронная почта*" type="text">
-                        <input name="date" placeholder="Дата" type="text">
-                        <input name="time" placeholder="Время" type="text">
-                    </div>
-                    <div class="my_problem">
-                        <textarea name="my_problem" placeholder="Расскажите о своей проблеме" type="text"></textarea>
-                    </div>
+            <h2 class="title">Рестораны</h2>
+            <div class="restaurant__wrapper">
+                <div class="restaurant__item">
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/images/restauran1.png" alt="">
+                    <div class="restaurant__subtitle">Soul in the Bowl</div>
+                    <div class="restaurant__descr">Американская . Тайская</div>
                 </div>
-                <div class="send_request">
-                  <div> Отправляя форму я соглашаюсь с <span>условиями передачи информации</span></div>
-                  <button button_submit>Записаться на прием</button>
+                <div class="restaurant__item">
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/images/restauran2.png" alt="">
+                    <div class="restaurant__subtitle">Falafel Bro</div>
+                    <div class="restaurant__descr">Вегетарианская . Шаверма . Сэндвичи</div>
                 </div>
-            </form>
+                <div class="restaurant__item">
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/images/restauran3.png" alt="">
+                    <div class="restaurant__subtitle">Варламов Есть</div>
+                    <div class="restaurant__descr">Азиатская . Американская . Европейская</div>
+                </div>
+                <div class="restaurant__item">
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/images/restauran4.png" alt="">
+                    <div class="restaurant__subtitle">Tacodor</div>
+                    <div class="restaurant__descr">Американская . Тайская</div>
+                </div>
+                <div class="restaurant__item">
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/images/restauran5.png" alt="">
+                    <div class="restaurant__subtitle">Prime</div>
+                    <div class="restaurant__descr">Вегетарианская . Шаверма . Сэндвичи</div>
+                </div>
+                <div class="restaurant__item">
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/images/restauran6.png" alt="">
+                    <div class="restaurant__subtitle">Город-Сад</div>
+                    <div class="restaurant__descr">Азиатская . Американская . Европейская</div>
+                </div>
+                <div class="restaurant__item">
+                    <img src="<?php echo bloginfo('template_url'); ?>/assets/images/restauran7.png" alt="">
+                    <div class="restaurant__subtitle">Ostrovsky lounge&bar</div>
+                    <div class="restaurant__descr">Американская . Тайская</div>
+                </div>
+            </div>
         </div>
     </section>
-    <?php
-      wp_footer();
-    ?>
+    <?php wp_footer(); ?>
 </body>
 </html>
 
