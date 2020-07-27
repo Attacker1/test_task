@@ -1,4 +1,4 @@
-@import "common/variables";
+
 
 /** Import everything from autoload */
 //@import "./autoload/**/*";
@@ -12,7 +12,6 @@
 // @import "~some-node-module";
 
 /** Import theme styles */
-@import "common/global";
 @import "components/style";
 @import "components/header";
 @import "components/promo";

@@ -1,25 +1,24 @@
 <section class="promo">
-    <div class="container">
-        @include('components/header')
-    </div>
     <div class="devider"></div>
     <div class="container">
-        @include('components/promo_wrapper')
+        @include('components.promo_wrapper')
     </div>
     <div class="devider"></div>
         <div class="shadow">
         <div class="container">
             <div class="promo__navigation">
                 <div class="promo__list">
-                    <div class="promo__type">Все</div>
-                    <div class="promo__type">Кофейни</div>
-                    <div class="promo__type">Кафе</div>
-                    <div class="promo__type">Бары</div>
-                    <div class="promo__type">Рестораны</div>
-                    <div class="promo__type">Русская</div>
-                    <div class="promo__type">Татарская</div>
-                    <div class="promo__type">Десерты</div>
-                    <div class="promo__type">Завтраки</div>
+                    <?php 
+                    $terms = get_terms( array(
+                        'taxonomy' => 'kitchen',
+                        'hide_empty' => false, 
+                    ));
+                    $output = '';
+                    foreach($terms as $term){
+                        $item = $term->name;
+                        echo "<div class='promo__type'>{$item}</div>";
+                    }
+                    ?>
                 </div>
                 <div class="promo__more">Еще
                     <div class="dav">
