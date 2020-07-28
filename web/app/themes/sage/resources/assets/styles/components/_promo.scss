@@ -1,6 +1,4 @@
 .promo {
-  padding: 14px 0 0 0;
-
   &__wrapper {
     padding: 24px 0;
   }
@@ -19,7 +17,7 @@
   }
 
   &__navigation {
-    padding: 8px 0;
+    padding: 6px 0;
     display: flex;
     position: relative;
     justify-content: space-between;
@@ -50,6 +48,7 @@
     color: #000;
     font-size: 16px;
     font-weight: 400;
+    margin-right: 6px;
     display: flex;
     cursor: pointer;
   }

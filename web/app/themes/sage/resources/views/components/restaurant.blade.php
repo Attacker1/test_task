@@ -1,38 +1,45 @@
 <section class="restaurant">
         <div class="container">
-            <h2 class="title">Рестораны</h2>
+            <h2 class="title restaurant__title">Рестораны</h2>
             <div class="restaurant__wrapper">
-                <!-- @component('components.restaurant_item')
-                  @slot('image')
-                    @asset('images/restauran1.png')
-                  @endslot
-                  @slot('title')
-                    Soul in the Bowl
-                  @endslot
-                  @slot('kitchen')
-                    Американская . Тайская
-                  @endslot
-                @endcomponent -->
-                <?php 
-                $args = array( 'post_type' => 'restaurant', 'post_per_page' => 10);
-                $loop = new WP_Query($args);
-                while ( $loop ->have_posts() ) : $loop->the_post();?>
+                {{-- @php
+                  $args = array( 'post_type' => 'restaurant', 'post_per_page' => 10);
+                  $loop = new WP_Query($args);
+                  while ( $loop ->have_posts() ) : $loop->the_post();
+                @endphp
                 @component('components.restaurant_item')
                   @slot('image')
-                    <?php the_post_thumbnail(); ?>
+                    {!! get_the_post_thumbnail_url(); !!}
                   @endslot
-                  @slot('title') <?php
-                  the_title();
-                  ?>
+                  @slot('title') 
+                    {!! the_title(); !!}
                   @endslot
                   @slot('kitchen')
-                    <?php the_terms(get_the_ID(), 'kitchen', '', ' . ', '') ?>
+                    {!! the_terms(get_the_ID(), 'kitchen', '', ' . ', '') !!}
                   @endslot
                 @endcomponent
-                
-                <?php
-                endwhile;
-                ?>
+                @php
+                  endwhile;
+                @endphp --}}
+                @php
+                  $args = array( 'post_type' => 'restaurant', 'post_per_page' => 10);
+                  $latest_posts = get_posts( $args );
+                  foreach( $latest_posts as $post) : 
+                @endphp
+                @component('components.restaurant_item')
+                  @slot('image')
+                    {!! get_the_post_thumbnail_url($post); !!}
+                  @endslot
+                  @slot('title') 
+                    {!! get_the_title($post); !!}
+                  @endslot
+                  @slot('kitchen')
+                    {!! the_terms($post->ID, 'kitchen', '', ' . ', ''); !!}
+                  @endslot
+                @endcomponent
+                @php
+                  endforeach;
+                @endphp
             </div>
         </div>
     </section>

@@ -8,17 +8,17 @@
         <div class="container">
             <div class="promo__navigation">
                 <div class="promo__list">
-                    <?php 
-                    $terms = get_terms( array(
+                    @php
+                    $terms = get_terms([
                         'taxonomy' => 'kitchen',
                         'hide_empty' => false, 
-                    ));
-                    $output = '';
-                    foreach($terms as $term){
-                        $item = $term->name;
-                        echo "<div class='promo__type'>{$item}</div>";
-                    }
-                    ?>
+                    ]);
+                    @endphp
+                    @if($terms)
+                        @foreach($terms as $term)
+                            <div class='promo__type'>{!! $term->name !!}</div>
+                        @endforeach
+                    @endif
                 </div>
                 <div class="promo__more">Еще
                     <div class="dav">

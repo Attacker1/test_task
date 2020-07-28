@@ -1,10 +1,8 @@
 <header class="header">
-    <a href="<?php echo get_home_url(); ?>" class="header__logo">
-        <!-- <img src="@asset('icons/logo.svg')" alt="logo"> -->
+    <a href="@php echo get_home_url(); @endphp" class="header__logo">
         @include('icon::logo')
     </a>
     <form action="#" class="search-box">
-        <!-- <img src="@asset('icons/linse.svg')" alt="search"> -->
         @include('icon::linse')
         <input type="text" placeholder="Поиск заведений и блюд">
     </form>
@@ -23,7 +21,11 @@
         </div>
     </div>
     <div class="header__account">
-        <!-- <img src="@asset('icons/avatar.svg')" alt="avatar"> -->
         @include('icon::avatar')
+    </div>
+    <div class="header__hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 </header>
