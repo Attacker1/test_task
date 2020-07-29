@@ -1,5 +1,5 @@
 <header class="header">
-    <a href="@php echo get_home_url(); @endphp" class="header__logo">
+    <a href="{{get_home_url()}}" class="header__logo">
         @include('icon::logo')
     </a>
     <form action="#" class="search-box">

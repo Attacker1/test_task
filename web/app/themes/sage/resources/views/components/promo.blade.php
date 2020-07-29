@@ -9,10 +9,10 @@
             <div class="promo__navigation">
                 <div class="promo__list">
                     @php
-                    $terms = get_terms([
-                        'taxonomy' => 'kitchen',
-                        'hide_empty' => false, 
-                    ]);
+                        $terms = get_terms([
+                            'taxonomy' => 'kitchen',
+                            'hide_empty' => false, 
+                        ]);
                     @endphp
                     @if($terms)
                         @foreach($terms as $term)

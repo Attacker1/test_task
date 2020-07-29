@@ -127,7 +127,7 @@ function register_post_types(){
 		//'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
 		'hierarchical'        => false,
 		'supports'            => [ 'title', 'editor', 'author','thumbnail' ], // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
-		'taxonomies'          => array('kitchen'),
+		'taxonomies'          => ['kitchen'],
 		'has_archive'         => false,
 		'rewrite'             => true,
 		'query_var'           => true,
@@ -158,7 +158,7 @@ function create_taxonomy(){
 
 		'rewrite'               => true,
 		//'query_var'             => $taxonomy, // название параметра запроса
-		'capabilities'          => array(),
+		'capabilities'          => [],
 		'meta_box_cb'           => null, // html метабокса. callback: `post_categories_meta_box` или `post_tags_meta_box`. false — метабокс отключен.
 		'show_admin_column'     => false, // авто-создание колонки таксы в таблице ассоциированного типа записи. (с версии 3.5)
 		'show_in_rest'          => null, // добавить в REST API
